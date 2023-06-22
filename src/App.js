@@ -1,16 +1,23 @@
-import logo from './logo.svg';
+import logo from './platzi.webp';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>App con react corriendo</p>
-        <a className="App-link" href="https://react.dev/learn" target="_blank" rel="noreferrer noopener">Learn React</a>
-      </header>
-    </div>
+
+      <TodoItem completed={8} total={11} />
+
   );
 }
 
-export default App;
+function TodoItem(props){
+  return(
+    <li>
+      <span>V</span>
+      <p> Completaste {props.completed} de {props.total} tareas</p>
+      <span>X</span>
+    </li>
+  );
+
+}
+
+export default App ;
